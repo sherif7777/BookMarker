@@ -82,7 +82,7 @@ function validateName(term) {
 }
 
 function validateURL(term) {
-  var urlRegex = /^[(www.)|(https://)].{1,}\.com/;
+  var urlRegex = /^(https?|ftp):\/\/[^\s\/$.?#].[^\s]*$/;
   if (urlRegex.test(term) == false) {
     urlSpan.classList.replace("d-none", "d-block");
     siteURLInput.classList.add("is-invalid");
